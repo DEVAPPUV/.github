@@ -4,9 +4,6 @@
 
 **Reporte anónimo y seguro de violencias de género en la región de Valparaíso**
 
-![Plataformas](https://img.shields.io/badge/plataformas-Android%20%7C%20iOS-4c8bf5)
-![Madurez](https://img.shields.io/badge/madurez-TRL%203%20%E2%86%92%20TRL%204-8a63d2)
-![Cobertura](https://img.shields.io/badge/cobertura-38%20comunas-2ea44f)
 
 </div>
 
