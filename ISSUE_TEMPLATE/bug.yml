@@ -1,0 +1,49 @@
+name: Error (bug)
+description: Algo que ya existía no funciona como debería
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **No pegues contraseñas, tokens ni datos reales de personas usuarias.**
+        Si el error expone información sensible, no abras un issue público: revisa `SECURITY.md`.
+  - type: textarea
+    id: que-pasa
+    attributes:
+      label: ¿Qué pasa?
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: ¿Qué debería pasar?
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducirlo
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: dropdown
+    id: plataforma
+    attributes:
+      label: ¿Dónde ocurre?
+      options:
+        - App en Android
+        - App en iOS
+        - API (backend)
+        - Base de datos
+        - Otro
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Capturas o mensajes de error
+      description: Recorta o tapa cualquier dato personal.

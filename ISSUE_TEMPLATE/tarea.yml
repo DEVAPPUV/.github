@@ -1,0 +1,38 @@
+name: Tarea
+description: Una tarea concreta de desarrollo, diseño o contenido
+title: "[BACK|FRONT|UX|CONTENIDO] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Las tareas cuelgan de una **historia de usuario** en `appano-planificacion`.
+        Si no existe la HU, créala primero allá.
+  - type: input
+    id: historia
+    attributes:
+      label: Historia de usuario relacionada
+      placeholder: "HU-03: Crear reporte (DEVAPPUV/appano-planificacion#3)"
+    validations:
+      required: true
+  - type: textarea
+    id: que
+    attributes:
+      label: ¿Qué hay que hacer?
+      description: Describe el resultado esperado, no solo la actividad.
+    validations:
+      required: true
+  - type: textarea
+    id: hecho
+    attributes:
+      label: ¿Cómo sabemos que está terminada?
+      value: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: contrato
+    attributes:
+      label: Contrato de la API (si aplica)
+      description: Ruta, datos que recibe, datos que devuelve y errores posibles.
+      render: text
