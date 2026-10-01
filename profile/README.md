@@ -41,20 +41,10 @@ Appaño busca ser un **primer paso seguro**: reconocer lo ocurrido, registrarlo 
 
 Appaño ya funciona como **prototipo (TRL 3)**. Hoy avanzan en paralelo dos líneas:
 
-1. **Validación en terreno** (Concurso innovANDO 2030, Universidad de Valparaíso): piloto controlado con estudiantes, funcionariado y cuerpo académico para pasar a **TRL 4** (prototipo validado en entorno relevante). Se evalúa aceptación, usabilidad y carga cognitiva.
-2. **Evaluación y mejora técnica del sistema** (trabajo de título, Ingeniería Informática): auditoría de calidad y arquitectura, corrección de defectos y refuerzo de seguridad.
+Mejoras técnicas tanto Frontend y Backend.
 
 ### Hoja de ruta
 
-| Etapa | Período estimado | Resultado esperado |
-|---|---|---|
-| Diagnóstico funcional | Oct 2026 | Casos de prueba y catastro de defectos |
-| Evaluación de arquitectura | Nov 2026 | Informe de arquitectura, análisis de código y propuesta priorizada de mejoras |
-| Implementación de mejoras | Mar – May 2027 | Backend refactorizado y pruebas automatizadas |
-| Validación con usuarias | May – Jun 2027 | Informe de usabilidad, aceptación y carga mental |
-| Cierre | Jun – Jul 2027 | Memoria y paquete de código auditado y transferible |
-
-> Las fechas son estimadas y pueden ajustarse.
 
 ## Dónde está cada cosa
 
