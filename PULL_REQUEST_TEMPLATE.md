@@ -4,7 +4,9 @@
 
 ## Issue relacionado
 
-Closes #
+<!-- Historia de usuario: Closes DEVAPPUV/appano-planificacion#n -->
+<!-- Issue de este mismo repo: Closes #n -->
+Closes
 
 ## Cómo probarlo
 
@@ -15,6 +17,8 @@ Closes #
 
 ## Checklist
 
+- [ ] La base del PR es `develop` (o `main` solo si es release/hotfix).
+- [ ] Los commits mencionan la HU (`HU-XX: ...`).
 - [ ] El cambio cumple los criterios de aceptación del issue.
 - [ ] No incluye `.env`, claves, tokens ni datos reales.
 - [ ] No imprime datos sensibles en los logs.

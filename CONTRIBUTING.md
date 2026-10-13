@@ -16,41 +16,48 @@ Todo trabajo tiene un issue. Las tareas están en el **Project "Appaño"** y cue
 
 ## 2. Crea una rama
 
-Nunca trabajes directo en `main`.
+Usamos **Gitflow** en `appano-backend`, `appano-frontend` y `appano-planificacion`: `main` guarda solo lo publicado y `develop` integra el trabajo. Nunca trabajes directo en `main` ni en `develop`.
+
+La primera vez, en cada repo, configura git-flow con `git flow init` (producción `main`, desarrollo `develop`, prefijos por defecto y prefijo de tags `v`). Luego, para cada historia:
 
 ```bash
-git checkout main
-git pull origin main
-git checkout -b feature/pantalla-login
+git checkout develop
+git pull
+git flow feature start HU-03-crear-reporte
 ```
 
-| Prefijo | Para qué |
-|---|---|
-| `feature/` | Funcionalidad nueva |
-| `fix/` | Corrección de un error |
-| `docs/` | Solo documentación |
-| `refactor/` | Mejora interna sin cambiar el comportamiento |
+| Prefijo | Para qué | Nace de |
+|---|---|---|
+| `feature/HU-XX-...` | Una historia de usuario (incluye su documentación y refactor) | `develop` |
+| `bugfix/` | Error encontrado en `develop` (aún no publicado) | `develop` |
+| `release/X.Y.0` | Preparar una entrega | `develop` |
+| `hotfix/X.Y.Z` | Error urgente en la app publicada | `main` |
+
+Los pasos de release y hotfix están en el [flujo de trabajo](https://github.com/DEVAPPUV/appano-planificacion/blob/develop/docs/flujo-de-trabajo.md#ramas-y-pull-requests-gitflow).
 
 ## 3. Haz commits pequeños y claros
 
-Mensaje en español, en presente, diciendo **qué** hace el cambio:
+Mensaje en español, en presente, empezando por la HU y diciendo **qué** hace el cambio:
 
 ```
-Agrega bloqueo temporal tras intentos fallidos de login
-Corrige error de métricas en Mi actividad
-Documenta variables de entorno del backend
+HU-01: Agrega bloqueo temporal tras intentos fallidos de login
+HU-04: Corrige error de métricas en Mi actividad
+HU-10: Muestra la versión de la app y el contacto
 ```
 
 ## 4. Abre un Pull Request
 
-- Base: `main`. Compara con tu rama.
+- Base: **`develop`**. Compara con tu rama. Solo los `release/` y `hotfix/` van a `main`.
 - Completa la plantilla que aparece.
-- En la descripción escribe `Closes #12` (o `Closes DEVAPPUV/appano-backend#12` si el issue está en otro repo). Así el issue se cierra solo al unir.
+- En la descripción escribe `Closes #12` (o `Closes DEVAPPUV/appano-planificacion#12` para cerrar una HU, que vive en otro repo). Así el issue se cierra solo al unir.
+- No uses `git flow feature finish`: une la rama sin revisión. El cierre siempre es con PR.
 - Pide revisión a otra persona. Muévela a **In review**.
 
 ## 5. Revisión
 
 - Al menos **una aprobación** antes de unir.
+- Cada integrante trabaja con **su propia cuenta** de GitHub. **Nadie aprueba ni une su propio PR.**
+- Se une con **"Merge pull request"** (squash y rebase están desactivados).
 - Quien revisa mira que se cumplan los **criterios de aceptación** del issue y la **Definición de Terminado** de la HU.
 - Los comentarios se resuelven en el mismo PR.
 
